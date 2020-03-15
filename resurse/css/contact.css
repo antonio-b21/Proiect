@@ -1,0 +1,19 @@
+table thead{
+    background-color: rgb(235, 235, 235);
+}
+table td, table th{
+    border: 1px black solid;
+    padding: 5px;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-left: 10%;
+}
+caption {
+    margin: 5px;
+    font-size: 1.1rem;
+}
+table td:nth-of-type(2) {
+    text-align: center;
+}
