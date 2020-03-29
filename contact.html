@@ -2,74 +2,96 @@
 <html lang="ro">
 
 <head>
-	<title>Pack & Go</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Mijloace de contact">
-	<meta name="author" content="UniBuc">
-	<meta name="keywords" content="Contact, email, numar de telefon, adresa">
-	<link rel="shortcut icon" type="image/x-icon" href="resurse/png/shortcut.png">
-	<link rel="stylesheet" type="text/css" href="resurse/css/style.css" >
-	<link rel="stylesheet" type="text/css" href="resurse/css/contact.css" >
+    <title>Contact - Pack & Go</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Mijloace de contact">
+    <meta name="author" content="UniBuc">
+    <meta name="keywords" content="Contact, email, numar de telefon, adresa">
+    <link rel="shortcut icon" type="image/x-icon" href="resurse/png/shortcut.png">
+    <link href="https://fonts.googleapis.com/css?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="resurse/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resurse/css/contact.css">
 </head>
 
 <body>
-	<header>
-		<img src="resurse/png/shortcut.png" alt="Logo Pack & Go">
-		<h1>Pack & Go</h1>
-		<nav>
-			<ul class="menu">
-				<li>
-					<div>Home</div>
-					<ul class="submenu">
-						<li><a href="index.html#1">Istoric</a></li>
-						<li><a href="index.html#2">Motivatie</a></li>
-						<li><a href="index.html#3">Promotii</a></li>
-					</ul>
-				</li>
-				<li>
-					<div>Produse</div>
-					<ul class="submenu">
-						<li><a href="produse.html#1">Rucsacuri barbati</a></li>
-						<li><a href="produse.html#2">Rucsacuri dame</a></li>
-					</ul>
-				</li>
-				<li><a href="comenzi.html">Comenzi</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section>
-			<h2>Contact</h2>
-			<addr>Cal. Dorobanti nr. 32 bl. Corp A et 2 ap. 16, Bucuresti - Sector 1, 010573</addr> <!-- eroare in validator-->
-			<p><a href="mailto:contact@packngo.ro">contact@packngo.ro</a></p>
-			<p>Tel: 021-320 9993</p>
-			<table>
-				<caption>
-					Program asistenta telefonica
-				</caption>
-				<thead>
-					<tr>
-						<th>Ziua</th>
-						<th>Intervalul orar</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Luni - Vineri</td>
-						<td>08:00 - 20:00</td>
-					</tr>
-					<tr>
-						<td>Sambata</td>
-						<td>10:00 - 18:00</td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
-	</main>
-	<footer>
-		<p>Copyright © 2020 Antonio Bigan</p>
-	</footer>
+    <header>
+        <img src="resurse/png/shortcut.png" alt="Logo Pack & Go" title="Pack & Go">
+        <h1>Pack & Go</h1>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <div>Home</div>
+                    <ul class="submenu">
+                        <li><a href="index.html#1">Istoric</a></li>
+                        <li><a href="index.html#2">Motivatie</a></li>
+                        <li><a href="index.html#3">Promotii</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Produse</div>
+                    <ul class="submenu">
+                        <li><a href="produse.html#1">Rucsacuri barbati</a></li>
+                        <li><a href="produse.html#2">Rucsacuri dame</a></li>
+                    </ul>
+                </li>
+                <li><a href="comenzi.html">Comenzi</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <addr>Cal. Dorobanti nr. 32 bl. Corp A et 2 ap. 16, Bucuresti - Sector 1, 010573</addr>
+            <div>
+                <iframe width="100%" height="300" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Cal.%20Dorobanti%20nr.%2032%20bl.%20Corp%20A%20et%202%20ap.%2016%2C%20Bucuresti+(Sediu%20Pack%20%26%20Go)&amp;ie=UTF8&amp;t=h&amp;z=17&amp;iwloc=B&amp;output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+            <!-- eroare in validator-->
+            <p><a href="mailto:contact@packngo.ro">contact@packngo.ro</a></p>
+            <p>Tel: 021-320 9993</p>
+            <hr>
+            <table>
+                <caption>
+                    <a href="resurse/pdf/Program asistenta.pdf" target="_blank" download>Program asistenta</a>
+                </caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Ziua</th>
+                        <th colspan="2">Intervalul orar</th>
+                    </tr>
+                    <th>
+                        08:00 - 16:00
+                    </th>
+                    <th>
+                        16:00 - 20:00
+                    </th>
+                    <tr>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Luni - Vineri</td>
+                        <td colspan="2">Telefonic si online</td>
+                    </tr>
+                    <tr>
+                        <td>Sambata</td>
+                        <td>Telefonic si online</td>
+                        <td>Online</td>
+                    </tr>
+                    <tr>
+                        <td>Duminica</td>
+                        <td colspan="2">Online</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <a href="#"><img src="resurse/png/upArrow.png"></a>
+        <p>Copyright © 2020 Antonio Bigan</p>
+    </footer>
 </body>
 
 </html>

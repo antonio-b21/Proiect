@@ -1,19 +1,44 @@
-table thead{
+section div {
+    width: 480px;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+hr {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+table thead {
     background-color: rgb(235, 235, 235);
 }
-table td, table th{
+
+table td,
+table th {
     border: 1px black solid;
     padding: 5px;
 }
+
 table {
     border-collapse: collapse;
     border: 1px solid black;
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 caption {
     margin: 5px;
     font-size: 1.1rem;
 }
-table td:nth-of-type(2) {
+
+table td:nth-of-type(n + 2) {
     text-align: center;
+    width: 38%;
+}
+
+section>addr {
+    font-size: 1rem;
+    text-indent: 3%;
+    text-align: justify;
+    display: block;
 }
