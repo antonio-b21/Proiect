@@ -7,10 +7,12 @@
     <meta name="description" content="Mijloace de contact">
     <meta name="author" content="UniBuc">
     <meta name="keywords" content="Contact, email, numar de telefon, adresa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="resurse/png/shortcut.png">
     <link href="https://fonts.googleapis.com/css?family=Titan+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="resurse/css/style.css">
     <link rel="stylesheet" type="text/css" href="resurse/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="resurse/css/middle.css" media="screen and (max-width:700px)">
 </head>
 
 <body>
@@ -42,14 +44,14 @@
     <main>
         <section>
             <h2>Contact</h2>
-            <addr>Cal. Dorobanti nr. 32 bl. Corp A et 2 ap. 16, Bucuresti - Sector 1, 010573</addr>
+            <addr><a href="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Cal.%20Dorobanti%20nr.%2032%20bl.%20Corp%20A%20et%202%20ap.%2016%2C%20Bucuresti+(Sediu%20Pack%20%26%20Go)&amp;ie=UTF8&amp;t=h&amp;z=17&amp;iwloc=B&amp;output=embed"
+                    target="mapIframe" onclick="document.getElementById('frame').height='300'">Cal. Dorobanti nr. 32 bl. Corp A et 2 ap. 16, Bucuresti - Sector 1, 010573</a></addr>
             <div>
-                <iframe width="100%" height="300" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Cal.%20Dorobanti%20nr.%2032%20bl.%20Corp%20A%20et%202%20ap.%2016%2C%20Bucuresti+(Sediu%20Pack%20%26%20Go)&amp;ie=UTF8&amp;t=h&amp;z=17&amp;iwloc=B&amp;output=embed"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe id="frame" name="mapIframe" width="100%" height="0" src="" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
             <!-- eroare in validator-->
-            <p><a href="mailto:contact@packngo.ro">contact@packngo.ro</a></p>
-            <p>Tel: 021-320 9993</p>
+            <p>Email: <a href="mailto:contact@packngo.ro" target="_blank">contact@packngo.ro</a></p>
+            <p>Tel: <a href="tel:0213209993">021-320 9993</a></p>
             <hr>
             <table>
                 <caption>

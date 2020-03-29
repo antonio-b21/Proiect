@@ -1,0 +1,65 @@
+html {
+    font-size: 16px;
+}
+
+main {
+    padding-left: 17%;
+    padding-right: 17%;
+    padding-top: 79px;
+}
+
+
+/* ---------- menu ---------- */
+
+ul.menu>li {
+    width: 50%;
+}
+
+ul.menu>li:hover ul.submenu {
+    width: 100vw;
+    position: absolute;
+    left: 0px;
+    top: 1.5rem;
+}
+
+ul.menu>li:hover ul.submenu>li {
+    float: left;
+    width: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    border-top: 0px;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+}
+
+ul.menu>li:nth-of-type(1):hover ul.submenu>li {
+    width: 33.33%;
+}
+
+ul.menu>li:nth-of-type(2):hover ul.submenu>li {
+    width: 50%;
+}
+
+ul.menu>li>ul.submenu>li:last-child {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 0px;
+}
+
+ul.menu>li:nth-child(even) {
+    border-right: 0px;
+}
+
+
+/* ---------- page ---------- */
+
+section>a {
+    top: -190px;
+}
+
+
+/* ---------- aside ---------- */
+
+aside {
+    top: 150px;
+    width: 15%;
+}
