@@ -3,9 +3,9 @@ html {
 }
 
 main {
-    padding-left: 17%;
-    padding-right: 17%;
-    padding-top: 79px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 150px;
 }
 
 
@@ -16,7 +16,7 @@ ul.menu>li {
 }
 
 ul.menu>li:hover ul.submenu {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     left: 0px;
     top: 1.5rem;
@@ -53,13 +53,25 @@ ul.menu>li:nth-child(even) {
 /* ---------- page ---------- */
 
 section>a {
-    top: -190px;
+    top: -160px;
+}
+
+section {
+    position: relative;
 }
 
 
 /* ---------- aside ---------- */
 
 aside {
-    top: 150px;
-    width: 15%;
+    position: absolute;
+    top: 100px;
+    right: 00px;
+    border-radius: 10px;
+    width: 100%;
+    overflow: visible;
+}
+
+aside img {
+    width: 100%;
 }

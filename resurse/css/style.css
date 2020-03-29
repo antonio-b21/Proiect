@@ -13,7 +13,7 @@ html {
 main {
     padding-left: 20%;
     padding-right: 20%;
-    padding-top: 55px;
+    padding-top: 125px;
     padding-bottom: 5px;
 }
 
@@ -23,7 +23,9 @@ main {
 header {
     text-align: center;
     width: 100%;
-    position: relative;
+    position: fixed;
+    background-image: url('../png/patern.png');
+    z-index: 3;
 }
 
 header img,
@@ -176,7 +178,7 @@ section>p {
 section>a {
     display: block;
     position: relative;
-    top: -160px;
+    top: -135px;
     visibility: hidden;
 }
 
@@ -184,12 +186,11 @@ section>a {
 /* ---------- aside ---------- */
 
 aside {
-    position: absolute;
+    position: fixed;
     box-sizing: border-box;
     right: 0;
     background-color: white;
     padding: 1%;
-    padding-right: 0px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     width: 18%;
