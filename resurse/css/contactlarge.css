@@ -1,5 +1,4 @@
 section div {
-    max-width: 600px;
     width: auto;
     padding-left: 20px;
 }
@@ -26,6 +25,10 @@ table {
     margin-right: auto;
 }
 
+table:hover {
+    cursor: help;
+}
+
 caption {
     margin: 5px;
     font-size: 1.1rem;
@@ -36,7 +39,7 @@ table td:nth-of-type(n + 2) {
     width: 38%;
 }
 
-section>addr {
+section>a {
     font-size: 1rem;
     text-indent: 3%;
     display: block;

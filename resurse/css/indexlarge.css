@@ -1,0 +1,39 @@
+aside#aside1 {
+    overflow: hidden;
+    padding: 0;
+    animation-name: aside;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+
+aside#aside1>figure>figcaption {
+    text-align: center;
+}
+
+aside#aside1 img {
+    width: 140%;
+}
+
+@keyframes aside {
+    0% {
+        right: 0;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        top: 125px;
+    }
+    50% {
+        right: 0;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        top: 100%;
+    }
+    100% {
+        left: 0;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        top: 125px;
+    }
+}
