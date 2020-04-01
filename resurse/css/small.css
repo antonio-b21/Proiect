@@ -49,7 +49,7 @@ ul.menu>li:nth-of-type(n):hover ul.submenu>li {
 
 /* ---------- page ---------- */
 
-section>a {
+section>a.link {
     top: -170px;
 }
 

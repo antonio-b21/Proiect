@@ -52,7 +52,7 @@ ul.menu>li:nth-child(even) {
 
 /* ---------- page ---------- */
 
-section>a {
+section>a.link {
     top: -160px;
 }
 
