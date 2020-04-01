@@ -9,6 +9,7 @@ aside#aside1 {
     animation-name: aside;
     padding-bottom: 1%;
     right: 0;
+    box-shadow: 0 0 0 black;
 }
 
 aside#aside1 img {
