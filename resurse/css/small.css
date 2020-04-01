@@ -1,11 +1,11 @@
 html {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 main {
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 160px;
+    padding-top: 190px;
 }
 
 
@@ -50,7 +50,7 @@ ul.menu>li:nth-of-type(n):hover ul.submenu>li {
 /* ---------- page ---------- */
 
 section>a.link {
-    top: -170px;
+    top: -201px;
 }
 
 
