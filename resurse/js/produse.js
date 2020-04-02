@@ -2,9 +2,15 @@ nrPoze = 16;
 locatiePoze = "./resurse/jpg/";
 extensiePoze = ".jpg";
 
+numeProduse = [
+    ["", "Rucsac Heavy Tools albastru", "Rucsac Ben Sherman negru", "Rucsac Gioseppo gri", "Rucsac Ben Sherman negru stins", "Rucsac Ben Sherman gri carbune", "Rucsac Heavy Tools negru", "Rucsac Heavy Tools gri inchis", "Rucsac Napapijri verde militar", "Rucsac Pepe Jeans London scortisoara", "Rucsac Pepe Jeans London bleumarin", "Rucsac Diesel negru", "Rucsac Heavy Tools gri", "Rucsac DC negru", "Rucsac Converse negru", "Rucsac DC verde oliv", "Rucsac Converse albastru inchis"],
+    ["", "Rucsac Beverly Hills Polo Club rosu inchis", "Rucsac Beverly Hills Polo Club negru", "Rucsac Beverly Hills Polo Club violet pruna", "Rucsac Antonio Moretti maro", "Rucsac Anna Morellini negru", "Rucsac Converse gri cenusa", "Rucsac DESIGUAL multicolor", "Rucsac DiAmanti negru", "Rucsac Guess gri", "Rucsac Puma gri", "Rucsac Puma albastru petrol", "Rucsac Evelyn", "Rucsac Evelyn", "Rucsac Chiara Canotti negru", "Rucsac Puma roz pal", "Rucsac Puma albastru royal"]
+];
+
 function incarcaPoze() {
     let sectiuni = ["barbati", "dama"];
-    for (const sectiune of sectiuni) {
+    for (let categorie = 0; categorie < 2; categorie++) {
+        const sectiune = sectiuni[categorie]
         var section = document.getElementById(sectiune);
         for (let i = 1; i <= nrPoze; i++) {
             var div = document.createElement("div");
@@ -18,7 +24,7 @@ function incarcaPoze() {
             imagine.alt = "rucsac" + section.id + i.toString();
             figura.appendChild(imagine);
             var descriere = document.createElement("figcaption");
-            // descriere.innerText = imagine.src;
+            descriere.innerText = numeProduse[categorie][i];
             figura.appendChild(descriere);
             div.appendChild(figura);
 
