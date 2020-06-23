@@ -1,0 +1,50 @@
+<header>
+    <img src="/png/shortcut.png" alt="Logo Pack & Go" title="Pack & Go">
+    <h1>Pack & Go</h1>
+    <div id="login">
+        <% if (!user) { %>
+        <form method="post" action="/login" id="login">
+            <label>
+                Username:
+                <input type="text" name="username" autofocus>
+            </label><br>
+            <label>
+                Parola: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="password" name="parola">
+            </label><br>
+            <input type="submit" value="Login" id="butonlogin">
+            <button type="button" id="inregistrare"> Inregistrare </button>
+        </form>
+        <% } else { %>
+            <div id="logat">
+                <p id="username">Esti logat ca <%= user.username %></p>
+                <button type="button" id="logout"> Logout </button>
+            </div>
+        <% } %>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li>
+                <div>Home</div>
+                <ul class="submenu">
+                    <li><a href="/">Istoric</a></li>
+                    <li><a href="/#2">Motivatie</a></li>
+                    <li><a href="/#3">Promotii</a></li>
+                </ul>
+            </li>
+            <li>
+                <div>Produse</div>
+                <ul class="submenu">
+                    <li><a href="/produse">Rucsacuri barbati</a></li>
+                    <li><a href="/produse#2">Rucsacuri dama</a></li>
+                </ul>
+            </li>
+            <% if (user) { %>
+                <li><a href="/comenzi">Comenzi</a></li>
+            <% } else { %>
+                <li><a href=""></a></li>
+            <% } %>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>

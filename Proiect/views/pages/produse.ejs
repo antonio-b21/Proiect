@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Rucsacuri pentru toti</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Produse pe categorii">
+    <meta name="author" content="Antonio Bigan">
+    <meta name="keywords" content="Produse, barbati, dama, Pack & Go">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/png/shortcut.png">
+    <link rel="stylesheet" type="text/css" href="/css/large.css">
+    <link rel="stylesheet" type="text/css" href="/css/produselarge.css">
+    <link rel="stylesheet" type="text/css" href="/css/middle.css" media="screen and (max-width:900px)">
+    <link rel="stylesheet" type="text/css" href="/css/produsemiddle.css" media="screen and (max-width:900px)">
+    <link rel="stylesheet" type="text/css" href="/css/small.css" media="screen and (max-width:500px)">
+    <link rel="stylesheet" type="text/css" href="/css/produsesmall.css" media="screen and (max-width:500px)">
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/general.js"></script>
+    <script src="/js/produse.js"></script>
+</head>
+
+<body>
+    <%- include('../pieces/header') %>
+    <main>
+        <aside id="meniu-produse">
+            <div>
+                <h2>Ordoneaza dupa:</h2>
+                <select id="sortare" name="sortare">
+                    <option value="Popularitate">Cele mai populare</option>
+                    <option value="PretCresc">Pret crescator</option>
+                    <option value="PretDescresc">Pret descrescator</option>
+                </select>
+            </div>
+            <div>
+                <h2>Firma:</h2>
+                <% var firme = new Set(); %>
+                <% for (rucsac of produse.rucsacuri) {%>
+                    <% firme.add(rucsac.nume); %>
+                <% } %>
+                <% firme = Array.from(firme).sort(); %>
+                <% for (let i = 0; i < firme.length; i++ ) {%>
+                    <input type="checkbox" id="firma<%= i %>" name="firma" value="<%= firme[i].split(' ').join('-') %>">
+                    <label for="firma<%= i %>"><%= firme[i] %></label><br>
+                    <% %>
+                <% } %>
+                <button type="button" id="filtrare">Filtreaza</button>
+            </div>
+        </aside>
+        <section>
+            <a class="link" id="1"></a>
+            <h2>Produse barbati</h2>
+            <div class="produse" id="barbati">
+                <% for (var i = 0; i < produse.lastId; i++) { %>
+                    <% if(produse.rucsacuri[i].sex == false){ %>
+                        <div class="produs <%= produse.rucsacuri[i].nume.split(' ').join('-') %>" id="<%= produse.rucsacuri[i].id %>">
+                            <img class="apasa" src="/jpg/<%= i.toString().padStart(2, '0') %>.jpg" alt="rucsac<%= i.toString().padStart(2, '0') %>">
+                            <div>
+                                <a href="/produse?id=<%= produse.rucsacuri[i].id %>"><%= produse.rucsacuri[i].descriere %></a>
+                            </div>
+                            <div class="pret">
+                                <hr>
+                                <p><%= produse.rucsacuri[i].pret %><sup>99</sup></p>
+                                <% if (user && !user.comanda.includes(i)) { %>
+                                    <a class="comanda" id="<%= produse.rucsacuri[i].id %>" href="">Comanda</a>
+                                <% } else if (user) { %>
+                                    <a class="comanda incos" id="<%= produse.rucsacuri[i].id %>" href="">In cos</a>
+                                <% } %>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+            <h2 id='inexistente' class="ascuns">Nu exista produse.</h2>
+        </section>
+        <section>
+            <a class="link" id="2"></a>
+            <h2>Produse dama</h2>
+            <div class="produse" id="dama">
+                <% for (var i = 0; i < produse.lastId; i++) { %>
+                    <% if(produse.rucsacuri[i].sex == true){ %>
+                        <div class="produs <%= produse.rucsacuri[i].nume.split(' ').join('-') %>" id="<%= produse.rucsacuri[i].id %>">
+                            <img class="apasa" src="/jpg/<%= i.toString().padStart(2, '0') %>.jpg" alt="rucsac<%= i.toString().padStart(2, '0') %>">
+                            <div>
+                                <a href="/produse?id=<%= produse.rucsacuri[i].id %>"><%= produse.rucsacuri[i].descriere %></a>
+                            </div>
+                            <div class="pret">
+                                <hr>
+                                <p><%= produse.rucsacuri[i].pret %><sup>99</sup></p>
+                                <% if (user && !user.comanda.includes(i)) { %>
+                                    <a class="comanda" id="<%= produse.rucsacuri[i].id %>" href="">Comanda</a>
+                                <% } else if (user) { %>
+                                    <a class="comanda incos" id="<%= produse.rucsacuri[i].id %>" href="">In cos</a>
+                                <% } %>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+            <h2 id='inexistente' class="ascuns">Nu exista produse.</h2>
+        </section>
+
+    </main>
+    <%- include('../pieces/footer') %>
+</body>
+
+</html>

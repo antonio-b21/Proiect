@@ -1,0 +1,50 @@
+.produs {
+    height: 245px;
+    padding: 0 3% 10px;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, lime, indigo 80%);
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.produs>img {
+    float: left;
+    height: 100%;
+}
+
+.date {
+    float: right;
+    width: 60%;
+    height: 100%;
+}
+
+.date>.date2 {
+    float: left;
+    margin-top: 15%;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.date>.date2>* {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.date>.date2>div>a {
+    text-decoration: none;
+    color: black;
+}
+
+.pret {
+    color: rgb(220, 0, 0);
+}
+
+.date>.date2>.buton {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(200, 80, 160);
+    border-radius: 7.5px;
+    padding: 2.5px 5px ;
+}

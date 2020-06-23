@@ -1,0 +1,30 @@
+{
+	"lastId": 2,
+	"useri": [
+		{
+			"id": 0,
+			"username": "admin",
+			"nume": "",
+			"email": "",
+			"parola": "dgtPjvhy2i+yIg7E7mz+2A==",
+			"dataInreg": "2020-05-29T17:50:42.141Z",
+			"rol": "admin",
+			"hobby": null,
+			"comanda": [
+				2,
+				22
+			]
+		},
+		{
+			"id": 1,
+			"username": "costel",
+			"nume": "",
+			"email": "",
+			"parola": "6px7OhjPjLqn62fTu6A15w==",
+			"dataInreg": "2020-06-06T12:58:25.286Z",
+			"rol": "user",
+			"hobby": null,
+			"comanda": []
+		}
+	]
+}

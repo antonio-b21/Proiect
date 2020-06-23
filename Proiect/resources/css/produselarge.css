@@ -1,0 +1,85 @@
+.produse {
+    display: grid;
+    grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+    grid-row-gap: 20px;
+    grid-column-gap: 2%;
+    padding: 15px 3%;
+    border-radius: 12.5px;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-bottom: 5px;
+}
+
+.produs {
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.produs>img {
+    width: 100%;
+    border-radius: 12.5px;
+}
+
+.produs>img+div {
+    margin-bottom: 5px;
+}
+
+.produs>img+div>a {
+    color: black;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.produs>div.pret {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    font-size: 1.5vw;
+}
+
+.produs>div.pret>hr {
+    margin-bottom: 5px;
+}
+
+.produs>div.pret>p {
+    color: rgb(220, 0, 0);
+    float: right;
+    padding-right: 1%;
+}
+
+.produs>div.pret>a.comanda {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(200, 160, 80);
+    border-radius: 7.5px;
+    padding: 2.5px 5px ;
+}
+
+.produs>div.pret>a.incos {
+    background-color: rgb(80, 200, 160);
+}
+
+aside#meniu-produse {
+    left: 0;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    top: 125px;
+    padding: -0 0.5%;
+}
+
+aside#meniu-produse>div {
+    padding: 15px 0;
+}
+
+aside#meniu-produse>div>h2 {
+    font-size: 1.1rem;
+}
+
+aside#meniu-produse>div>button {
+    width: 130px;
+    max-width: 70%;
+    margin-left: 20px;
+}

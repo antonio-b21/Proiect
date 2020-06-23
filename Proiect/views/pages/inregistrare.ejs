@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Inregistrare</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Creare cont nou">
+    <meta name="author" content="Antonio Bigan">
+    <meta name="keywords" content="Contact, email, numar de telefon, adresa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/png/shortcut.png">
+    <link rel="stylesheet" type="text/css" href="/css/large.css">
+    <link rel="stylesheet" type="text/css" href="/css/inregistrarelarge.css">
+    <link rel="stylesheet" type="text/css" href="/css/middle.css" media="screen and (max-width:900px)">
+    <link rel="stylesheet" type="text/css" href="/css/inregistraremiddle.css" media="screen and (max-width:900px)">
+    <link rel="stylesheet" type="text/css" href="/css/small.css" media="screen and (max-width:500px)">
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print">
+    <script src="/js/general.js"></script>
+</head>
+
+<body>
+    <%- include('../pieces/header') %>
+    <main>
+        <section>
+            <h2>Inregistrare utilizator</h2>
+            <hr>
+            <form method="post" action="/inregistrare">
+                <div class="campuri">
+                    <p class="camp">
+                        <label>
+                            &nbsp; Username: <br />
+                            <input type="text" name="username">
+                        </label>
+                    </p>
+                    <p class="camp">
+                        <label>
+                            &nbsp; Nume: <br />
+                            <input type="text" name="nume">
+                        </label>
+                    </p>
+                    <p class="camp">
+                        <label>
+                            &nbsp; Parola: <br />
+                            <input type="password" name="parola">
+                        </label>
+                    </p>
+                    <p class="camp">
+                        <label>
+                            &nbsp; Reintroduceti parola: <br />
+                            <input type="password" name="rparola">
+                        </label>
+                    </p>
+                    <p class="camp">
+                        <label>
+                            &nbsp; Email: <br />
+                            <input type="email" name="email" size="40">
+                        </label>
+                    </p>
+                    <p class="camp">
+                        <label>
+                            &nbsp; Sex: <br />
+                            <label><input type="radio" name="sex" value="0"> Barbat </label>
+                            <label><input type="radio" name="sex" value="1"> Femeie </label>
+                        </label>
+                    </p>
+                    <p class="camp">
+                        <label>
+                            &nbsp; Hobby-uri (separate cu virgula): <br />
+                            <input type="text" name="hobby" size="60">
+                        </label>
+                    </p>
+                </div>
+                <p>
+                    <input type="submit" value="Creeaza cont" id="submit">
+                </p>
+            </form>
+        </section>
+    </main>
+    <%- include('../pieces/footer') %>
+</body>
+
+</html>

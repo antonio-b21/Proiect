@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Cosul meu de cumparaturi</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Modifica produsele din cosul de cumparaturi si finalizeaza comanda">
+    <meta name="author" content="Antonio Bigan">
+    <meta name="keywords" content="Comanda, cos de cumparaturi, pack & go">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/png/shortcut.png">
+    <link rel="stylesheet" type="text/css" href="/css/large.css">
+    <link rel="stylesheet" type="text/css" href="/css/comenzilarge.css">
+    <link rel="stylesheet" type="text/css" href="/css/middle.css" media="screen and (max-width:900px)">
+    <link rel="stylesheet" type="text/css" href="/css/small.css" media="screen and (max-width:500px)">
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print">
+    <script src="/js/general.js"></script>
+    <script src="/js/comenzi.js"></script>
+</head>
+
+<body>
+    <%- include('../pieces/header') %>
+    <main>
+        <section>
+            <h2>Cosul meu</h2>
+            <% if (user.comanda.length == 0) { %>
+                <h2>Cosul dumneavoastra este gol!</h2>
+            <% } else { %>
+                <% var total = 0; %>
+                <% for (var i = 0; i < user.comanda.length; i++) { %>
+                    <% var produs = produse.rucsacuri.find((el) => { return el.id == user.comanda[i]; }) %>
+                    <div class="produs">
+                        <img class="apasa" src="/jpg/<%= produs.id.toString().padStart(2, '0') %>.jpg" alt="rucsac<%= produs.id.toString().padStart(2, '0') %>">
+                        <div class="date">
+                            <div class="date2">
+                                <div>
+                                    <a href="/produse?id=<%= produs.id %>"><%= produs.descriere %></a>
+                                </div>
+                                <a class="buton" id="<%= produs.id %>" href="">Sterge</a>
+                                <p class="pret"><%= produs.pret %><sup>99</sup></p>
+                                <% total += produs.pret + 0.99 %>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+                <h2>Total: <span class="pret"><%= total %></span></h2>
+            <% } %>
+        </section>
+    </main>
+    <%- include('../pieces/footer') %>
+</body>
+
+</html>

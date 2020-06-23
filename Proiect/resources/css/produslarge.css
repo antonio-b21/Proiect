@@ -1,0 +1,19 @@
+section>.produs {
+    box-shadow: none;
+    margin: 13vw 0;
+    padding-left: 15%;
+    font-size: 1.3rem;
+}
+
+section>.produs>img {
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 30px 10% 0 0;
+    position: absolute;
+    right: 0;
+    top: -13vw;
+}
+
+section>.produs>div.pret {
+    bottom: -30px;
+}

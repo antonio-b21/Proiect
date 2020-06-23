@@ -1,0 +1,9 @@
+nav,
+img,
+aside {
+    visibility: hidden;
+}
+
+strong {
+    color: unset;
+}

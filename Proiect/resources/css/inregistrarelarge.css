@@ -1,0 +1,20 @@
+.campuri {
+    text-align: initial;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 1%;
+    padding: 15px 3%;
+}
+.camp:nth-of-type(7){
+    grid-area: 4 / 1 / span 1 / span 2;
+}
+
+form {
+    text-align: center;
+}
+#submit {
+    width: 6rem;
+    height: 1.5rem;
+    margin: 20px;
+}

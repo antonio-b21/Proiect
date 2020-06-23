@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title><%= produs.descriere %></title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Produse pe categorii">
+    <meta name="author" content="Antonio Bigan">
+    <meta name="keywords" content="Produse, barbati, dama, Pack & Go">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/png/shortcut.png">
+    <link rel="stylesheet" type="text/css" href="/css/large.css">
+    <link rel="stylesheet" type="text/css" href="/css/produselarge.css">
+    <link rel="stylesheet" type="text/css" href="/css/produslarge.css">
+    <link rel="stylesheet" type="text/css" href="/css/middle.css" media="screen and (max-width:900px)">
+    <link rel="stylesheet" type="text/css" href="/css/produsemiddle.css" media="screen and (max-width:900px)">
+    <link rel="stylesheet" type="text/css" href="/css/small.css" media="screen and (max-width:500px)">
+    <link rel="stylesheet" type="text/css" href="/css/produsesmall.css" media="screen and (max-width:500px)">
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/general.js"></script>
+    <script src="/js/produse.js"></script>
+</head>
+
+<body>
+    <%- include('../pieces/header') %>
+    <main>
+        <section>
+            <h2><%= produs.descriere %></h2>
+            <div class="produs <%= produs.nume.split(' ').join('-') %>" id="<%= produs.id %>">
+                <img class="apasa" src="/jpg/<%= produs.id.toString().padStart(2, '0') %>large.jpg" alt="rucsac<%= produs.id.toString().padStart(2, '0') %>">
+                <p class="ascuns"><%= produs.descriere %></p>
+                <div class="pret">
+                    <hr class="ascuns">
+                    <p class="ascuns"><%= produs.pret %><sup>99</sup></p>
+                    <% if (user && !user.comanda.includes(produs.id)) { %>
+                        <a class="comanda" id="<%= produs.id %>" href="">Comanda</a>
+                    <% } else if (user) { %>
+                        <a class="comanda incos" id="<%= produs.id %>" href="">In cos</a>
+                    <% } %>
+                </div>
+                <p>Pret: <%= produs.pret %><sup>99</sup></p>
+                <p>Firma: <%= produs.nume %></p>
+                <p>Culori: <%= produs.culoare %></p>
+            </div>
+            <h2>Alte produse</h2>
+            <div class="produse">
+                <% var indici = Array.from(Array(produse.lastId).keys()); %>
+                <% indici = shuffle(indici); %>
+                <% var pozitie = indici.indexOf(produs.id); %>
+                <% indici.splice(pozitie, 1); %>
+                <% indici.splice(4); %>
+                <% for (var i = 0; i < indici.length; i++) { %>
+                        <div class="produs <%= produse.rucsacuri[indici[i]].nume.split(' ').join('-') %>" id="<%= produse.rucsacuri[indici[i]].id %>">
+                            <img class="apasa" src="/jpg/<%= indici[i].toString().padStart(2, '0') %>.jpg" alt="rucsac<%= indici[i].toString().padStart(2, '0') %>">
+                            <div>
+                                <a href="/produse?id=<%= produse.rucsacuri[indici[i]].id %>"><%= produse.rucsacuri[indici[i]].descriere %></a>
+                            </div>
+                            <div class="pret">
+                                <hr>
+                                <p><%= produse.rucsacuri[indici[i]].pret %><sup>99</sup></p>
+                                <% if (user && !user.comanda.includes(indici[i])) { %>
+                                    <a class="comanda" id="<%= produse.rucsacuri[indici[i]].id %>" href="">Comanda</a>
+                                <% } else if (user) { %>
+                                    <a class="comanda incos" id="<%= produse.rucsacuri[indici[i]].id %>" href="">In cos</a>
+                                <% } %>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                <% } %>
+            </div>
+        </section>
+    </main>
+    <%- include('../pieces/footer') %>
+</body>
+
+</html>

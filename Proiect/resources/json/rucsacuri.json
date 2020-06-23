@@ -1,0 +1,293 @@
+{
+    "lastId": 32,
+    "rucsacuri": [
+        {
+            "id": 0,
+            "nume": "Heavy Tools",
+            "descriere": "Rucsac Heavy Tools albastru",
+            "sex": false,
+            "pret": 139,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "albastru, negru, rosu"
+        },
+        {
+            "id": 1,
+            "nume": "Ben Sherman",
+            "descriere": "Rucsac Ben Sherman negru",
+            "sex": false,
+            "pret": 79,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru, gri"
+        },
+        {
+            "id": 2,
+            "nume": "Gioseppo",
+            "descriere": "Rucsac Gioseppo gri",
+            "sex": false,
+            "pret": 319,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "gri, acvamarin"
+        },
+        {
+            "id": 3,
+            "nume": "Ben Sherman",
+            "descriere": "Rucsac Ben Sherman negru stins",
+            "sex": false,
+            "pret": 79,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru stins, gri"
+        },
+        {
+            "id": 4,
+            "nume": "Ben Sherman",
+            "descriere": "Rucsac Ben Sherman gri carbune",
+            "sex": false,
+            "pret": 79,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "gri carbune, galben"
+        },
+        {
+            "id": 5,
+            "nume": "Heavy Tools",
+            "descriere": "Rucsac Heavy Tools negru",
+            "sex": false,
+            "pret": 109,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru"
+        },
+        {
+            "id": 6,
+            "nume": "Heavy Tools",
+            "descriere": "Rucsac Heavy Tools gri inchis",
+            "sex": false,
+            "pret": 109,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "gri inchis"
+        },
+        {
+            "id": 7,
+            "nume": "Napapijri",
+            "descriere": "Rucsac Napapijri verde militar",
+            "sex": false,
+            "pret": 149,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "verde militar, kaki"
+        },
+        {
+            "id": 8,
+            "nume": "Pepe Jeans London",
+            "descriere": "Rucsac Pepe Jeans London scortisoara",
+            "sex": false,
+            "pret": 359,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "scortisoara, maro, bleumarin"
+        },
+        {
+            "id": 9,
+            "nume": "Pepe Jeans London",
+            "descriere": "Rucsac Pepe Jeans London bleumarin",
+            "sex": false,
+            "pret": 159,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "bleumarin, scortisoara"
+        },
+        {
+            "id": 10,
+            "nume": "Diesel",
+            "descriere": "Rucsac Diesel negru",
+            "sex": false,
+            "pret": 759,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru, alb"
+        },
+        {
+            "id": 11,
+            "nume": "Heavy Tools",
+            "descriere": "Rucsac Heavy Tools gri",
+            "sex": false,
+            "pret": 199,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "gri, portocaliu, rosu, albastru celest"
+        },
+        {
+            "id": 12,
+            "nume": "DC",
+            "descriere": "Rucsac DC negru",
+            "sex": false,
+            "pret": 199,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru, gri, rosu"
+        },
+        {
+            "id": 13,
+            "nume": "Converse",
+            "descriere": "Rucsac Converse negru",
+            "sex": false,
+            "pret": 149,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru, alb"
+        },
+        {
+            "id": 14,
+            "nume": "DC",
+            "descriere": "Rucsac DC verde oliv",
+            "sex": false,
+            "pret": 199,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "verde oliv, kaki"
+        },
+        {
+            "id": 15,
+            "nume": "Converse",
+            "descriere": "Rucsac Converse albastru inchis",
+            "sex": false,
+            "pret": 114,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "albastru inchis, alb"
+        },
+        {
+            "id": 16,
+            "nume": "Beverly Hills Polo Club",
+            "descriere": "Rucsac Beverly Hills Polo Club rosu inchis",
+            "sex": true,
+            "pret": 159,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "rosu inchis, argintiu"
+        },
+        {
+            "id": 17,
+            "nume": "Beverly Hills Polo Club",
+            "descriere": "Rucsac Beverly Hills Polo Club negru",
+            "sex": true,
+            "pret": 129,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru, argintiu"
+        },
+        {
+            "id": 18,
+            "nume": "Beverly Hills Polo Club",
+            "descriere": "Rucsac Beverly Hills Polo Club violet pruna",
+            "sex": true,
+            "pret": 129,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "pruna, auriu"
+        },
+        {
+            "id": 19,
+            "nume": "Antonio Moretti",
+            "descriere": "Rucsac Antonia Moretti maro",
+            "sex": true,
+            "pret": 309,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "maro, argintiu"
+        },
+        {
+            "id": 20,
+            "nume": "Anna Morellini",
+            "descriere": "Rucsac Anna Morellini negru",
+            "sex": true,
+            "pret": 259,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru"
+        },
+        {
+            "id": 21,
+            "nume": "Converse",
+            "descriere": "Rucsac Converse gri cenusa",
+            "sex": true,
+            "pret": 99,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "gri cenusa, alb"
+        },
+        {
+            "id": 22,
+            "nume": "DESIGUAL",
+            "descriere": "Rucsac DESIGUAL multicolor",
+            "sex": true,
+            "pret": 234,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "roz, rosu, albastru"
+        },
+        {
+            "id": 23,
+            "nume": "DiAmanti",
+            "descriere": "Rucsac DiAmanti negru",
+            "sex": true,
+            "pret": 319,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru, auriu"
+        },
+        {
+            "id": 24,
+            "nume": "Guess",
+            "descriere": "Rucsac Guess gri",
+            "sex": true,
+            "pret": 659,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "gri, aringitiu"
+        },
+        {
+            "id": 25,
+            "nume": "Puma",
+            "descriere": "Rucsac Puma gri",
+            "sex": true,
+            "pret": 99,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "gri, alb"
+        },
+        {
+            "id": 26,
+            "nume": "Puma",
+            "descriere": "Rucsac Puma albastru petrol",
+            "sex": true,
+            "pret": 149,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "albastru petrol, bej"
+        },
+        {
+            "id": 27,
+            "nume": "Evelyn",
+            "descriere": "Rucsac Evelyn gri",
+            "sex": true,
+            "pret": 89,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "gri"
+        },
+        {
+            "id": 28,
+            "nume": "Evelyn",
+            "descriere": "Rucsac Evelyn negru",
+            "sex": true,
+            "pret": 89,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru"
+        },
+        {
+            "id": 29,
+            "nume": "Chiara Canotti",
+            "descriere": "Rucsac Chiara Canotti negru",
+            "sex": true,
+            "pret": 339,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "negru, argintiu"
+        },
+        {
+            "id": 30,
+            "nume": "Puma",
+            "descriere": "Rucsac Puma roz pal",
+            "sex": true,
+            "pret": 79,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "roz pal, rosu"
+        },
+        {
+            "id": 31,
+            "nume": "Puma",
+            "descriere": "Rucsac Puma albastru royal",
+            "sex": true,
+            "pret": 69,
+            "dataAdaugare": "2020-05-20T20:00:00.920Z",
+            "culoare": "albastru electric, albastru inchis, alb"
+        }
+    ]
+}

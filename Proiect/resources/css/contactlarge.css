@@ -1,0 +1,47 @@
+section div {
+    width: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+hr {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+table thead {
+    background-color: rgb(235, 235, 235);
+}
+
+table td,
+table th {
+    border: 1px black solid;
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table:hover {
+    cursor: help;
+}
+
+caption {
+    margin: 5px;
+    font-size: 1.1rem;
+}
+
+table td:nth-of-type(n + 2) {
+    text-align: center;
+    width: 38%;
+}
+
+section>a {
+    font-size: 1rem;
+    text-indent: 3%;
+    display: block;
+}
