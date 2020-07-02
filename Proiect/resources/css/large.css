@@ -261,10 +261,10 @@ div#popup {
     z-index: 5;
     top: 0;
     left: 0;
-    margin: 45vh 35vw;
+    margin: 41vh 35vw;
     background-color: rgb(235, 235, 235, 0.85);
     width: 30vw;
-    height: 10vh;
+    height: 18vh;
     border-radius: 10px;
     box-shadow: 0 1vh 1vh black;
     text-align: center;
@@ -273,6 +273,10 @@ div#popup {
 div#popup>h1 {
     font-size: 1.5rem;
     margin: 3.5vh 0;
+}
+
+div#popup>button {
+    font-size: 1.5rem;
 }
 
 div#imaginepopup {
@@ -291,6 +295,62 @@ div#imaginepopup {
 }
 
 div#imaginepopup>img {
+    position: relative;
+    top: -50px;
+    height: 100%;
+}
+
+/* ---------- popup2 ---------- */
+
+div#fundalpopup2 {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background-color: rgb(235, 235, 235, 0.3);
+    width: 100vw;
+    height: 100vh;
+}
+
+div#popup2 {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    margin: 41vh 35vw;
+    background-color: rgb(235, 235, 235, 0.85);
+    width: 30vw;
+    height: 18vh;
+    border-radius: 10px;
+    box-shadow: 0 1vh 1vh black;
+    text-align: center;
+}
+
+div#popup2>h1 {
+    font-size: 1.5rem;
+    margin: 3.5vh 0;
+}
+
+div#popup2>button {
+    font-size: 1.5rem;
+}
+
+div#imaginepopup2 {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    margin: 2.5vh 35vw;
+    background-color: rgb(255, 255, 255);
+    width: 30vw;
+    height: 95vh;
+    border-radius: 10px;
+    box-shadow: 0 1vh 1vh black;
+    text-align: center;
+    overflow: hidden;
+}
+
+div#imaginepopup2>img {
     position: relative;
     top: -50px;
     height: 100%;

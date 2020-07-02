@@ -16,6 +16,7 @@ function loadProd() {
                         var data = JSON.stringify({ username: username, produs: parseInt(e.target.id) });
                         xhr.send(data);
                         e.target.classList.add("incos");
+                        e.target.style.color = "red";
                         e.target.innerText = "In cos";
                         popup("Produsul a fost adaugat in cos!");
                     }
@@ -46,6 +47,39 @@ function loadProd() {
             for (produs of produse) {
                 if (firme.includes(produs.classList[1]) && produs.classList.contains("ascuns") ) {
                     produs.classList.toggle("ascuns");
+                }
+                else if (!firme.includes(produs.classList[1]) && !produs.classList.contains("ascuns") ) {
+                    produs.classList.toggle("ascuns");
+                }
+            }
+            for (let i = 2; i <= 3; i++) {
+                var nrProd = $('main>section:nth-child('+i+')>div>div').length;
+                var nrProdAscunse = $('main>section:nth-child('+i+')>div>div.ascuns').length;
+                if (nrProd - nrProdAscunse == 0) {
+                    $('main>section:nth-child('+i+')>h2#inexistente')[0].classList = "";
+                }
+                else {
+                    $('main>section:nth-child('+i+')>h2#inexistente')[0].classList = "ascuns";
+                }
+            }
+            window.location = "#";
+        };
+    }
+    if (document.getElementById("resetare")) {
+        document.getElementById("resetare").onclick = () => {
+            var firme = [];
+            var checkboxes = document.getElementsByName("firma");
+            for (var i=0; i<checkboxes.length; i++) {
+                firme.push(checkboxes[i].value);
+            }
+            localStorage.setItem("filtre", JSON.stringify(firme));
+            for (var i=0; i<checkboxes.length; i++) {
+                checkboxes[i].checked = false;
+            }
+            produse = document.getElementsByClassName("produs");
+            for (produs of produse) {
+                if (firme.includes(produs.classList[1]) && produs.classList.contains("ascuns") ) {
+                    produs.classList.toggle("ascuns"); //modific style
                 }
                 else if (!firme.includes(produs.classList[1]) && !produs.classList.contains("ascuns") ) {
                     produs.classList.toggle("ascuns");

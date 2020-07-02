@@ -3,7 +3,7 @@
     padding: 0 3% 10px;
     border: 5px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(to right, lime, indigo 80%);
+    border-image-source: linear-gradient(to right, rgb(80, 200, 160), rgb(200, 80, 160) 80%);
     margin-top: 10px;
     margin-left: 5%;
     margin-right: 5%;
@@ -44,7 +44,7 @@
 .date>.date2>.buton {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    background-color: rgb(200, 80, 160);
+    background-color: rgb(120, 80, 200);
     border-radius: 7.5px;
     padding: 2.5px 5px ;
 }

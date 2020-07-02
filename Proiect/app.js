@@ -21,6 +21,18 @@ app.locals.shuffle = (array) => {
     return array;
 }
 
+function log(info) {
+    var logfile;
+    if (fs.existsSync("app.log")) {
+        logfile = fs.readFileSync("app.log").toString();
+    }
+    else {
+        logfile = "";
+    }
+    logfile += new Date().toUTCString() + ": " + info + '\n';
+    fs.writeFileSync("app.log", logfile);
+}
+
 //----------------use
 app.use(express.static(path.join(__dirname, 'resources')));
 app.use(session({
@@ -53,15 +65,8 @@ app.post('/inregistrare', (req, res) => {
         useriJSON.useri.push(user);
         useriJSON.lastId += 1;
         fs.writeFileSync("resources/json/useri.json", JSON.stringify(useriJSON, null, '\t'));
-        var logfile;
-        if (fs.existsSync("app.log")) {
-            logfile = fs.readFileSync("app.log").toString();
-        }
-        else {
-            logfile = "";
-        }
-        logfile += new Date().toUTCString() + ": userul " + user.username + "(ID: " + user.id + ") s-a inregistrat\n";
-        fs.writeFileSync("app.log", logfile);
+        var logData = "userul " + user.username + "(ID: " + user.id + ") s-a inregistrat";
+        log(logData);
         req.session.utilizator = user.id;
         res.redirect("/");
     });
@@ -79,15 +84,8 @@ app.post('/login', (req, res) => {
             if (req.session.url == "/inregistrare") {
                 req.session.url = "/";
             }
-            var logfile;
-            if (fs.existsSync("app.log")) {
-                logfile = fs.readFileSync("app.log").toString();
-            }
-            else {
-                logfile = "";
-            }
-            logfile += new Date().toUTCString() + ": userul " + user.username + "(ID: " + user.id + ") s-a conectat\n";
-            fs.writeFileSync("app.log", logfile);
+            var logData = "userul " + user.username + "(ID: " + user.id + ") s-a conectat";
+            log(logData);
         }
         res.redirect(req.session.url);
     });
@@ -120,13 +118,6 @@ app.get('/*', (req, res) => {
     else if (currURL.pathname == "/produse" && currURL.search) {
         var query = currURL.searchParams;
         if (Array.from(query).length == 1 && query.get("id") && query.get("id") >= 0 && query.get("id") < produse.lastId) {
-            var logfile;
-            if (fs.existsSync("app.log")) {
-                logfile = fs.readFileSync("app.log").toString();
-            }
-            else {
-                logfile = "";
-            }
             let userlocal;
             if (user) {
                 userlocal = user.username + "(ID: " + user.id + ")";
@@ -134,8 +125,8 @@ app.get('/*', (req, res) => {
             else {
                 userlocal = "guest";
             }
-            logfile += new Date().toUTCString() + ": userul " + userlocal + " a vizualizat produsul (ID: " + query.get("id") + ")\n";
-            fs.writeFileSync("app.log", logfile);
+            var logData = "userul " + userlocal + " a vizualizat un produs(ID: " + query.get("id") + ")";
+            log(logData);
             res.render('pages/produs', { user: user, produse: produse, produs: produse.rucsacuri[query.get("id")] });
         }
         else {
@@ -168,15 +159,8 @@ app.put('/adauga', (req, res) => {
     var user = useriJSON.useri.find((el) => { return el.username == req.body.username; });
     useriJSON.useri[user.id].comanda.push(req.body.produs);
     fs.writeFileSync("resources/json/useri.json", JSON.stringify(useriJSON, null, '\t'));
-    var logfile;
-    if (fs.existsSync("app.log")) {
-        logfile = fs.readFileSync("app.log").toString();
-    }
-    else {
-        logfile = "";
-    }
-    logfile += new Date().toUTCString() + ": userul " + user.username + "(ID: " + user.id + ") a adaugat produsul (ID: " + req.body.produs + ") in cosul de cumparaturi\n";
-    fs.writeFileSync("app.log", logfile);
+    var logData = "userul " + user.username + "(ID: " + user.id + ") a adaugat un produs(ID: " + req.body.produs + ") in cosul de cumparaturi";
+    log(logData);
 });
 app.put('/sterge', (req, res) => {
     var useriJSON = JSON.parse(fs.readFileSync("resources/json/useri.json"));
@@ -184,28 +168,13 @@ app.put('/sterge', (req, res) => {
     var pozitie = useriJSON.useri[user.id].comanda.indexOf(req.body.produs);
     useriJSON.useri[user.id].comanda.splice(pozitie, 1);
     fs.writeFileSync("resources/json/useri.json", JSON.stringify(useriJSON, null, '\t'));
-    var logfile;
-    if (fs.existsSync("app.log")) {
-        logfile = fs.readFileSync("app.log").toString();
-    }
-    else {
-        logfile = "";
-    }
-    logfile += new Date().toUTCString() + ": userul " + user.username + "(ID: " + user.id + ") a sters produsul (ID: " + req.body.produs + ") din cosul de cumparaturi\n";
-    fs.writeFileSync("app.log", logfile);
+    var logData = "userul " + user.username + "(ID: " + user.id + ") a sters un produs(ID: " + req.body.produs + ") din cosul de cumparaturi";
+    log(logData);
 });
 
 //----------------listen
 app.listen(8080, () => {
     console.log('Aplicatia se va deschide pe portul 8080.');
-    var logfile;
-    if (fs.existsSync("app.log")) {
-        logfile = fs.readFileSync("app.log").toString();
-    }
-    else {
-        logfile = "";
-    }
-    logfile += "\n";
-    logfile += new Date().toUTCString() + ": serverul a pornit\n";
-    fs.writeFileSync("app.log", logfile);
+    var logData = "serverul a pornit";
+    log(logData);
 });
